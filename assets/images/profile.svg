@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-color-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-color-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-color-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-color-opacity:0.8" />
+    </linearGradient>
+    <filter id="blur-effect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background Circle with Glow -->
+  <circle cx="200" cy="200" r="180" fill="url(#grad1)" filter="url(#blur-effect)" opacity="0.15" />
+  <circle cx="200" cy="200" r="170" fill="#050816" stroke="url(#glow)" stroke-width="4" />
+  
+  <!-- Decorative grid lines or tech pattern -->
+  <line x1="80" y1="200" x2="320" y2="200" stroke="#2563eb" stroke-dasharray="5,5" opacity="0.3" />
+  <line x1="200" y1="80" x2="200" y2="320" stroke="#06b6d4" stroke-dasharray="5,5" opacity="0.3" />
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#8b5cf6" stroke-dasharray="2,8" opacity="0.4" />
+  
+  <!-- Developer Silhouette / Avatar -->
+  <!-- Shoulders/Torso -->
+  <path d="M100,340 C100,280 140,240 200,240 C260,240 300,280 300,340" fill="url(#grad1)" />
+  <!-- Neck -->
+  <rect x="185" y="210" width="30" height="40" rx="5" fill="#f8fafc" opacity="0.9" />
+  <!-- Head -->
+  <circle cx="200" cy="160" r="60" fill="#f8fafc" />
+  <!-- Tech Glasses (Blue glowing) -->
+  <rect x="160" y="145" width="35" height="15" rx="3" fill="#06b6d4" />
+  <rect x="205" y="145" width="35" height="15" rx="3" fill="#06b6d4" />
+  <line x1="195" y1="152" x2="205" y2="152" stroke="#06b6d4" stroke-width="3" />
+  <!-- Coding Headset -->
+  <path d="M135,160 A65,65 0 0,1 265,160" fill="none" stroke="#8b5cf6" stroke-width="8" stroke-linecap="round" />
+  <rect x="130" y="145" width="12" height="30" rx="5" fill="#8b5cf6" />
+  <rect x="258" y="145" width="12" height="30" rx="5" fill="#8b5cf6" />
+  <!-- Glowing Mic -->
+  <path d="M136,170 Q145,195 170,195" fill="none" stroke="#8b5cf6" stroke-width="3" />
+  <circle cx="170" cy="195" r="4" fill="#06b6d4" />
+
+  <!-- Code Symbol Floating -->
+  <text x="70" y="130" font-family="'Poppins', sans-serif" font-size="28" font-weight="bold" fill="#06b6d4" opacity="0.6">&lt;/&gt;</text>
+  <text x="300" y="130" font-family="'Poppins', sans-serif" font-size="28" font-weight="bold" fill="#8b5cf6" opacity="0.6">{ }</text>
+</svg>

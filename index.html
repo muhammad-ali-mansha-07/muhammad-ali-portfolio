@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Ali | Software Engineering Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Muhammad Ali, a passionate Software Engineering student at The University of Lahore. Specializing in Web Development, Machine Learning, and Problem Solving.">
+  <meta name="keywords" content="Muhammad Ali, Portfolio, Software Engineering Student, The University of Lahore, Wazirabad, Developer, Web Development, Machine Learning, Data Structures, Algorithms, AI">
+  <meta name="author" content="Muhammad Ali">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/YOUR_USERNAME">
+  <meta property="og:title" content="Muhammad Ali | Software Engineering Portfolio">
+  <meta property="og:description" content="Explore the projects, skills, education, and achievements of Muhammad Ali, a Software Engineering student and full-stack developer.">
+  <meta property="og:image" content="assets/images/profile.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Muhammad Ali | Software Engineering Portfolio">
+  <meta property="twitter:description" content="Explore the projects, skills, education, and achievements of Muhammad Ali, a Software Engineering student and full-stack developer.">
+  <meta property="twitter:image" content="assets/images/profile.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/profile.svg">
+
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Ali",
+    "jobTitle": "Software Engineering Student & Full Stack Developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wazirabad",
+      "addressRegion": "Punjab",
+      "addressCountry": "Pakistan"
+    },
+    "email": "muhammad1026ali@gmail.com",
+    "telephone": "+923466708161",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "The University of Lahore"
+    },
+    "url": "https://github.com/YOUR_USERNAME",
+    "sameAs": [
+      "https://github.com/YOUR_USERNAME",
+      "https://linkedin.com/in/YOUR_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Preloader overlay -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="spinner"></div>
+      <div class="preloader-text">Ali.dev is booting...</div>
+    </div>
+  </div>
+
+  <!-- Particle background canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Interactive cursor background glow -->
+  <div class="mouse-glow-bg"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Fixed Header & Navigation -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">
+        <span class="gradient-text">Ali.dev</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utility icons -->
+      <div class="nav-utilities">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <!-- Mobile Menu Trigger -->
+        <button id="hamburger-menu" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay Drawer -->
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#certificates" class="mobile-nav-link">Certificates</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <!-- Decorative background shapes -->
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h5 class="hero-greeting">Hello World, my name is</h5>
+          <h1 class="hero-name">Muhammad Ali</h1>
+          <h2 class="hero-title">I am a <span class="typing-text gradient-text"></span></h2>
+          <p class="hero-desc">
+            Hello! I'm Muhammad Ali, a Software Engineering student at The University of Lahore, Pakistan. I enjoy building modern web applications, solving complex programming problems, and continuously learning new technologies in software development, artificial intelligence, and computer science.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover-glow-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" class="hover-glow-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:muhammad1026ali@gmail.com" class="hover-glow-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="hero-buttons">
+            <a href="assets/resume/resume.pdf" download="Muhammad_Ali_SE_Resume.pdf" class="btn btn-primary">
+              <i class="fas fa-file-download"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              View Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <img src="assets/images/profile.svg" alt="Muhammad Ali Avatar" class="hero-avatar">
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <a href="#about" aria-label="Scroll Down">
+          <span class="mouse-icon">
+            <span class="wheel"></span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-info glass-card">
+            <h3>Student &amp; Developer</h3>
+            <p>
+              I am a passionate Software Engineering student with a strong interest in software development, data structures, algorithms, artificial intelligence, machine learning, and modern web technologies. I enjoy transforming ideas into interactive digital products while continuously improving my programming and problem-solving skills.
+            </p>
+            <div class="personal-details-grid">
+              <div class="detail-cell"><i class="fas fa-user-graduate"></i> <strong>Degree:</strong> Bachelor of Software Engineering</div>
+              <div class="detail-cell"><i class="fas fa-university"></i> <strong>University:</strong> The University of Lahore</div>
+              <div class="detail-cell"><i class="fas fa-globe-asia"></i> <strong>Country:</strong> Pakistan</div>
+              <div class="detail-cell"><i class="fas fa-map-marker-alt"></i> <strong>City:</strong> Wazirabad</div>
+            </div>
+            
+            <div class="highlights-container">
+              <h4>My Highlights</h4>
+              <div class="highlights-grid">
+                <div class="highlight-pill"><i class="fas fa-bolt"></i> Quick Learner</div>
+                <div class="highlight-pill"><i class="fas fa-code"></i> Problem Solver</div>
+                <div class="highlight-pill"><i class="fas fa-users"></i> Team Player</div>
+                <div class="highlight-pill"><i class="fas fa-fire"></i> Self Motivated</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- LeetCode & GitHub stats panels on the right side of About section -->
+          <div class="stats-panel-wrapper">
+            <!-- LeetCode Mockup Widget -->
+            <div class="leetcode-card glass-card">
+              <div class="widget-header">
+                <div class="leetcode-brand"><i class="fas fa-code"></i> LeetCode Stats</div>
+                <span class="badge">Solved</span>
+              </div>
+              <div class="leetcode-body">
+                <div class="leetcode-progress-circle">
+                  <div class="circle-inner">
+                    <span class="total-solved">524</span>
+                    <span class="total-label">Solved</span>
+                  </div>
+                </div>
+                <div class="leetcode-stats-breakdown">
+                  <div class="lc-row easy">
+                    <span class="lc-difficulty">Easy</span>
+                    <span class="lc-numbers">180 <span class="lc-slash">/ 200</span></span>
+                    <div class="lc-bar-wrapper"><div class="lc-bar" style="width: 90%;"></div></div>
+                  </div>
+                  <div class="lc-row medium">
+                    <span class="lc-difficulty">Medium</span>
+                    <span class="lc-numbers">280 <span class="lc-slash">/ 350</span></span>
+                    <div class="lc-bar-wrapper"><div class="lc-bar" style="width: 80%;"></div></div>
+                  </div>
+                  <div class="lc-row hard">
+                    <span class="lc-difficulty">Hard</span>
+                    <span class="lc-numbers">64 <span class="lc-slash">/ 100</span></span>
+                    <div class="lc-bar-wrapper"><div class="lc-bar" style="width: 64%;"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Contribution Grid Mockup -->
+            <div class="github-card glass-card">
+              <div class="widget-header">
+                <div class="github-brand"><i class="fab fa-github"></i> GitHub Contributions</div>
+                <span class="badge success">Active</span>
+              </div>
+              <div class="github-contributions-grid" id="github-grid">
+                <!-- Javascript will inject mock calendar tiles here for high-fidelity appearance -->
+              </div>
+              <div class="github-footer">
+                <span>3,240 contributions in the last year</span>
+                <div class="github-legend">
+                  <span>Less</span>
+                  <div class="legend-box level-0"></div>
+                  <div class="legend-box level-1"></div>
+                  <div class="legend-box level-2"></div>
+                  <div class="legend-box level-3"></div>
+                  <div class="legend-box level-4"></div>
+                  <span>More</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Proficiencies in programming languages, web systems, and computer science modules.</p>
+        
+        <div class="skills-grid">
+          <!-- Programming -->
+          <div class="skills-category glass-card">
+            <h3><i class="fas fa-terminal"></i> Programming</h3>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>C++</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Python</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="85%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Java</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>JavaScript</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skills-category glass-card">
+            <h3><i class="fas fa-layer-group"></i> Web Development</h3>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>HTML / CSS</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="95%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>React</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Node.js</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Tailwind CSS / Bootstrap</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Computer Science -->
+          <div class="skills-category glass-card">
+            <h3><i class="fas fa-project-diagram"></i> Computer Science &amp; Core</h3>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Data Structures &amp; Algorithms</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>OS &amp; Database Systems</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="80%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Object-Oriented Programming (OOP)</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>AI, ML &amp; Git Version Control</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-progress="78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Explore a gallery of engineering projects filtered by application types.</p>
+        
+        <!-- Project Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="systems">Software Systems</button>
+          <button class="filter-btn" data-filter="ai-ml">Machine Learning / AI</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 (Software Systems) -->
+          <div class="project-card glass-card" data-category="systems">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-student.svg" alt="Student Management System" class="project-image">
+            </div>
+            <div class="project-details">
+              <span class="project-category-badge"><i class="fas fa-network-wired"></i> Systems</span>
+              <h3 class="project-title">Student Management System</h3>
+              <p class="project-description">
+                A terminal database application for enrollment registers. Programmed in C++ leveraging pointer arrays and binary search files to optimize system records logs.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C++</span>
+                <span class="tag">DSA</span>
+                <span class="tag">File Handling</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn-project btn-github"><i class="fab fa-github"></i> Source</a>
+                <a href="#" class="btn-project btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 (Software Systems) -->
+          <div class="project-card glass-card" data-category="systems">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-library.svg" alt="Library Management System" class="project-image">
+            </div>
+            <div class="project-details">
+              <span class="project-category-badge"><i class="fas fa-book-reader"></i> Systems</span>
+              <h3 class="project-title">Library Management System</h3>
+              <p class="project-description">
+                An OOP database application managing loans, members inventories, transaction states, and overdue fines calculations.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">OOP</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn-project btn-github"><i class="fab fa-github"></i> Source</a>
+                <a href="#" class="btn-project btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 (AI / ML) -->
+          <div class="project-card glass-card" data-category="ai-ml">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-ml.svg" alt="Machine Learning Prediction Model" class="project-image">
+            </div>
+            <div class="project-details">
+              <span class="project-category-badge"><i class="fas fa-brain"></i> AI / ML</span>
+              <h3 class="project-title">Machine Learning Prediction Model</h3>
+              <p class="project-description">
+                A grade tracking model built to forecast students academic performance based on historical logs and multivariate regression coefficients.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">Pandas</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn-project btn-github"><i class="fab fa-github"></i> Source</a>
+                <a href="#" class="btn-project btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 (Web) -->
+          <div class="project-card glass-card" data-category="web">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-portfolio.svg" alt="Personal Portfolio Website" class="project-image">
+            </div>
+            <div class="project-details">
+              <span class="project-category-badge"><i class="fas fa-laptop-code"></i> Web</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">
+                The current interactive landing page showcasing skills, certificates, and achievements. Fully optimized for high-performance responsive renders.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn-project btn-github"><i class="fab fa-github"></i> Source</a>
+                <a href="#" class="btn-project btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 (Web) -->
+          <div class="project-card glass-card" data-category="web">
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-ds.svg" alt="Data Structures Visualizer" class="project-image">
+            </div>
+            <div class="project-details">
+              <span class="project-category-badge"><i class="fas fa-draw-polygon"></i> Web / Algo</span>
+              <h3 class="project-title">Data Structures Visualizer</h3>
+              <p class="project-description">
+                A dynamic react portal enabling users to step-by-step visualize searches, sort sequences, graphs routing, and tree node traversals.
+              </p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Algorithms</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn-project btn-github"><i class="fab fa-github"></i> Source</a>
+                <a href="#" class="btn-project btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 - Present</div>
+            <div class="timeline-content glass-card">
+              <h3>Bachelor of Software Engineering</h3>
+              <h4 class="timeline-institution">The University of Lahore</h4>
+              <span class="timeline-status-badge"><i class="fas fa-clock"></i> Currently Studying</span>
+              <p class="timeline-description">
+                Focusing on computing theories, architecture models, quality assurances, database normalizations, and intelligent systems algorithms.
+              </p>
+              <div class="coursework-list">
+                <h5>Relevant Coursework:</h5>
+                <ul>
+                  <li><i class="fas fa-book"></i> Data Structures</li>
+                  <li><i class="fas fa-book"></i> Algorithms</li>
+                  <li><i class="fas fa-book"></i> Database Systems</li>
+                  <li><i class="fas fa-book"></i> Operating Systems</li>
+                  <li><i class="fas fa-book"></i> Artificial Intelligence</li>
+                  <li><i class="fas fa-book"></i> Machine Learning</li>
+                  <li><i class="fas fa-book"></i> Software Engineering</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Summer Intern (Upcoming)</div>
+            <div class="timeline-content glass-card">
+              <h3>Software Developer Intern</h3>
+              <h4 class="timeline-institution">Placeholder Tech Organization</h4>
+              <p class="timeline-description">
+                Building internal developer toolkits, assisting database design schemas, and writing unit test suites to optimize web components.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 - Present</div>
+            <div class="timeline-content glass-card">
+              <h3>Freelance Web Developer</h3>
+              <h4 class="timeline-institution">Self-Employed (Remote)</h4>
+              <p class="timeline-description">
+                Deploying landing pages and full-stack utilities for local client networks, increasing load speeds, and organizing SQLite data grids.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Certificates</h2>
+        <div class="certificates-grid">
+          <!-- Card 1 -->
+          <div class="certificate-card glass-card">
+            <div class="certificate-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p class="cert-authority">Online Coursework Certification</p>
+            <span class="cert-date">Completed Oct 2024</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="certificate-card glass-card">
+            <div class="certificate-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3>Python Programming</h3>
+            <p class="cert-authority">Programming Institute Credentials</p>
+            <span class="cert-date">Completed Aug 2024</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="certificate-card glass-card">
+            <div class="certificate-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p class="cert-authority">Deep Learning Certification</p>
+            <span class="cert-date">Completed Mar 2025</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="certificate-card glass-card">
+            <div class="certificate-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3>Data Structures &amp; Algorithms</h3>
+            <p class="cert-authority">Algorithmic Theory Certification</p>
+            <span class="cert-date">Completed Jan 2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION (Animated Counters) -->
+    <section id="achievements" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievements-counters-grid">
+          <!-- Counter 1 -->
+          <div class="counter-card glass-card">
+            <div class="counter-icon"><i class="fas fa-code"></i></div>
+            <div class="counter-number" data-target="500">0</div>
+            <div class="counter-label">Programming Problems Solved</div>
+          </div>
+          <!-- Counter 2 -->
+          <div class="counter-card glass-card">
+            <div class="counter-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="counter-number" data-target="12">0</div>
+            <div class="counter-label">Academic Projects Completed</div>
+          </div>
+          <!-- Counter 3 -->
+          <div class="counter-card glass-card">
+            <div class="counter-icon"><i class="fas fa-books"></i></div>
+            <div class="counter-number" data-target="15">0</div>
+            <div class="counter-label">Technologies Learned</div>
+          </div>
+          <!-- Counter 4 -->
+          <div class="counter-card glass-card">
+            <div class="counter-icon"><i class="fas fa-history"></i></div>
+            <div class="counter-number" data-target="1200">0</div>
+            <div class="counter-label">Coding Hours Logged</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Reach out directly via details below or send a message using the form.</p>
+        
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info-panel">
+            <h3>Get in Touch</h3>
+            <p>I am looking for internship opportunities and freelance assignments. Feel free to contact me.</p>
+            
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:muhammad1026ali@gmail.com">muhammad1026ali@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+923466708161">+92 346 6708161</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <span>Wazirabad, Pakistan</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-icons">
+              <a href="https://github.com/YOUR_USERNAME" target="_blank" class="hover-glow-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" class="hover-glow-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-panel glass-card">
+            <form id="contact-form" autocomplete="off">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" name="subject" placeholder="Project Inquiry" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+              </button>
+              <div class="form-status-msg" id="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Muhammad Ali. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:muhammad1026ali@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
