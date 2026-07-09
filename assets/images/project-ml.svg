@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050816;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0d24;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="400" rx="10" fill="url(#bgGrad)" />
+  
+  <!-- Neural Network Visualizer Frame -->
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="#050816" stroke="rgba(139, 92, 246, 0.15)" stroke-width="1.5" />
+  
+  <!-- Connections (Lines) -->
+  <g opacity="0.3">
+    <!-- Input to Hidden 1 -->
+    <line x1="100" y1="120" x2="220" y2="90" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="120" x2="220" y2="170" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="120" x2="220" y2="250" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="120" x2="220" y2="330" stroke="#06b6d4" stroke-width="1.5" />
+    
+    <line x1="100" y1="200" x2="220" y2="90" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="200" x2="220" y2="170" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="200" x2="220" y2="250" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="200" x2="220" y2="330" stroke="#06b6d4" stroke-width="1.5" />
+    
+    <line x1="100" y1="280" x2="220" y2="90" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="280" x2="220" y2="170" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="280" x2="220" y2="250" stroke="#06b6d4" stroke-width="1.5" />
+    <line x1="100" y1="280" x2="220" y2="330" stroke="#06b6d4" stroke-width="1.5" />
+
+    <!-- Hidden 1 to Hidden 2 -->
+    <line x1="220" y1="90" x2="340" y2="130" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="90" x2="340" y2="210" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="90" x2="340" y2="290" stroke="#8b5cf6" stroke-width="1.5" />
+    
+    <line x1="220" y1="170" x2="340" y2="130" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="170" x2="340" y2="210" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="170" x2="340" y2="290" stroke="#8b5cf6" stroke-width="1.5" />
+    
+    <line x1="220" y1="250" x2="340" y2="130" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="250" x2="340" y2="210" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="250" x2="340" y2="290" stroke="#8b5cf6" stroke-width="1.5" />
+
+    <line x1="220" y1="330" x2="340" y2="130" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="330" x2="340" y2="210" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="330" x2="340" y2="290" stroke="#8b5cf6" stroke-width="1.5" />
+
+    <!-- Hidden 2 to Output -->
+    <line x1="340" y1="130" x2="460" y2="200" stroke="#ec4899" stroke-width="2" />
+    <line x1="340" y1="210" x2="460" y2="200" stroke="#ec4899" stroke-width="2" />
+    <line x1="340" y1="290" x2="460" y2="200" stroke="#ec4899" stroke-width="2" />
+  </g>
+
+  <!-- Nodes (Circles) -->
+  <!-- Input Layer -->
+  <circle cx="100" cy="120" r="14" fill="url(#glowBlue)" filter="url(#glow)" />
+  <circle cx="100" cy="200" r="14" fill="url(#glowBlue)" filter="url(#glow)" />
+  <circle cx="100" cy="280" r="14" fill="url(#glowBlue)" filter="url(#glow)" />
+  <text x="94" y="204" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fff">x1</text>
+  
+  <!-- Hidden Layer 1 -->
+  <circle cx="220" cy="90" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+  <circle cx="220" cy="170" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+  <circle cx="220" cy="250" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+  <circle cx="220" cy="330" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+
+  <!-- Hidden Layer 2 -->
+  <circle cx="340" cy="130" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+  <circle cx="340" cy="210" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+  <circle cx="340" cy="290" r="14" fill="url(#glowPurple)" filter="url(#glow)" />
+
+  <!-- Output Layer -->
+  <circle cx="460" cy="200" r="16" fill="#ec4899" filter="url(#glow)" />
+  <text x="455" y="204" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fff">y</text>
+
+  <!-- Title / Metric Overlay -->
+  <rect x="360" y="40" width="180" height="50" rx="6" fill="#0d1330" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1" />
+  <text x="375" y="60" font-family="sans-serif" font-size="10" fill="#94a3b8">Prediction Accuracy</text>
+  <text x="375" y="80" font-family="sans-serif" font-size="16" font-weight="bold" fill="#10b981">98.42%</text>
+
+  <rect x="50" y="325" width="100" height="30" rx="4" fill="#0d1330" opacity="0.8" />
+  <text x="60" y="344" font-family="monospace" font-size="9" fill="#06b6d4">loss: 0.024</text>
+</svg>
